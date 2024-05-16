@@ -3,3 +3,4 @@ js project
 
 # Tools
 - [imgs](https://br.freepik.com/)
+- [icons](https://ionic.io/ionicons)

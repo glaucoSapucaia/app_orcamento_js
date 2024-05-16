@@ -49,7 +49,85 @@
         </nav>
         <!-- nav end -->
 
+        <!-- main start -->
+        <div class="container">
+            <!-- row-1 start -->
+            <div class="row">
+                <div class="col mb-5">
+                    <h1 class="display-4">Registro de nova despesa</h1>
+                </div>
+            </div>
 
+            <!-- row-2 start -->
+            <div class="row mb-2">
+
+                <!-- col-1 -->
+                <div class="col-md-2">
+                    <select name="" id="ano" class="form-control">
+                        <option value="">Ano</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div>
+
+                <!-- col-2 -->
+                <div class="col-md-2">
+                    <select name="" id="mes" class="form-control">
+                        <option value="">Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+
+                <!-- col-3 -->
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Dia" id="dia">
+                </div>
+
+                <!-- col-4 -->
+                <div class="col-md-6">
+                    <select name="" id="tipo" class="form-control">
+                        <option value="">Tipo</option>
+                        <option value="1">Alimentação</option>
+                        <option value="2">Educação</option>
+                        <option value="3">Lazer</option>
+                        <option value="4">Saúde</option>
+                        <option value="5">Transporte</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- row-3 start -->
+            <div class="row">
+                <!-- col-1 -->
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="descricao" placeholder="Descrição">
+                </div>
+
+                <!-- col-2 -->
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="valor" placeholder="Valor">
+                </div>
+
+                <!-- col-3 -->
+                <div class="col-md-2 d-flex justify-content-end">
+                    <button class="btn btn-primary" type="button">
+                        <ion-icon name="send"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- main end -->
 
         <!-- Bootstrap JavaScript Libraries -->
         <script
@@ -63,5 +141,9 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!-- icons -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
