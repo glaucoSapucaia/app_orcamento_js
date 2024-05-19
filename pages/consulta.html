@@ -49,6 +49,106 @@
         </nav>
         <!-- nav end -->
 
+        <!-- container start -->
+        <div class="container">
+            <!-- row start 1 -->
+            <div class="row mb-5">
+                <div class="col">
+                    <h1 class="display-4">Consulta de Despesas</h1>
+                </div>
+            </div>
+
+            <!-- row start 2 -->
+            <div class="row mb-2">
+                <!-- col 1 -->
+                <div class="col-md-2">
+                    <select name="" id="ano" class="form-control">
+                        <option value="">Ano</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div>
+
+                <!-- col 2 -->
+                <div class="col-md-2">
+                    <select name="" id="mes" class="form-control">
+                        <option value="">Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+
+                <!-- col 3 -->
+                <div class="col-md-2">
+                    <input type="text" placeholder="Dia" class="form-control" id="dia">
+                </div>
+
+                <!-- col 4 -->
+                <div class="col-md-6">
+                    <select name="" id="tipo" class="form-control">
+                        <option value="1">Alimentação</option>
+                        <option value="2">Educação</option>
+                        <option value="3">Lazer</option>
+                        <option value="4">Saúde</option>
+                        <option value="5">Transporte</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- row start 3 -->
+            <div class="row mb-5">
+                <!-- col 1 -->
+                <div class="col-md-8">
+                    <input type="text" placeholder="Descrição" class="form-control" id="descricao">
+                </div>
+
+                <!-- col 2 -->
+                <div class="col-md-2">
+                    <input type="text" placeholder="Valor" class="form-control" id="valor">
+                </div>
+
+                <!-- col 3 -->
+                <div class="col-md-2 justify-content-end d-flex">
+                    <button class="btn btn-primary">
+                        <ion-icon name="send"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+            <!-- row start 4 -->
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <!-- table head -->
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Tipo</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <!-- table body -->
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- container end -->
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
