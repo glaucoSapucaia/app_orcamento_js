@@ -8,6 +8,18 @@ class Despesa {
         this.descricao = descricao
         this.valor = valor
     }
+
+    // validando dados
+    validaDados() {
+        for (let i in this) {
+            if (
+                this[i] == undefined || this[i] == '' || this[i] == null
+            ) {
+                return false
+            }
+        }
+        return true
+    }
 }
 
 // classe para comunicação com Local Storage
@@ -57,6 +69,13 @@ function cadastrarDespesa() {
         ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value
     )
 
-    // Mantendo dados no local storage
-    bd.salvar(despesa)
+    // validando dados
+    if (despesa.validaDados()) {
+        // Mantendo dados no local storage
+        // bd.salvar(despesa)
+        console.log('Dados válidos')
+    } else {
+        console.log('Dados inválidos')
+    }
+
 }
