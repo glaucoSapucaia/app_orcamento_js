@@ -73,9 +73,13 @@ function cadastrarDespesa() {
     if (despesa.validaDados()) {
         // Mantendo dados no local storage
         // bd.salvar(despesa)
-        console.log('Dados válidos')
+        let modal = new bootstrap.Modal(document.getElementById('sucessosalvar'))
+        modal.show()
     } else {
-        console.log('Dados inválidos')
+        // jquery | Modal components
+        // Selecionamos a div modal, e a exibimos com 'show'
+        let modal = new bootstrap.Modal(document.getElementById('errosalvar'))
+        modal.show()
     }
 
 }
