@@ -10,6 +10,38 @@ class Despesa {
     }
 }
 
+// classe para comunicação com Local Storage
+class Bd {
+    constructor() {
+        // lógica - primary KEY
+        let id = localStorage.getItem('id')
+
+        if (id === null) {
+            localStorage.setItem('id', 0)
+        }
+    }
+
+    getProximoId() {
+        // localStorage.getItem()
+        // Busca elementos do banco de dados
+        let proximoId = localStorage.getItem('id')
+        return parseInt(proximoId) + 1
+    }
+
+    // Local storage function
+    salvar(d) {
+    // chamando local storage
+    // JSON.stringify()
+    // Converte dados de um objeto para o formato JSON
+        let id = this.getProximoId()
+        localStorage.setItem(id, JSON.stringify(d))
+        localStorage.setItem('id', id)
+    }
+}
+
+// instanciando classe Bd
+let bd = new Bd()
+
 // index | Lançamento
 function cadastrarDespesa() {
     // recuperando valores
@@ -26,14 +58,5 @@ function cadastrarDespesa() {
     )
 
     // Mantendo dados no local storage
-    salvar(despesa)
-}
-
-// Local storage function
-function salvar(d) {
-    // chamando local storage
-
-    // JSON.stringify()
-    // Converte dados de um objeto para o formato JSON
-    localStorage.setItem('despesa', JSON.stringify(d))
+    bd.salvar(despesa)
 }
