@@ -25,5 +25,15 @@ function cadastrarDespesa() {
         ano.value, mes.value, dia.value, tipo.value, descricao.value, valor.value
     )
 
-    console.log(despesa)
+    // Mantendo dados no local storage
+    salvar(despesa)
+}
+
+// Local storage function
+function salvar(d) {
+    // chamando local storage
+
+    // JSON.stringify()
+    // Converte dados de um objeto para o formato JSON
+    localStorage.setItem('despesa', JSON.stringify(d))
 }
