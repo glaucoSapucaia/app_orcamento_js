@@ -72,13 +72,29 @@ function cadastrarDespesa() {
     // validando dados
     if (despesa.validaDados()) {
         // Mantendo dados no local storage
-        // bd.salvar(despesa)
-        let modal = new bootstrap.Modal(document.getElementById('sucessosalvar'))
+        bd.salvar(despesa)
+
+        // alteração dinâmica do modal
+        document.getElementById('modal_div').className = "modal-header text-success"
+        document.getElementById('modal_btn').className = 'btn btn-success'
+        document.getElementById('modal_titulo').innerHTML = 'Registro Efetuado!'
+        document.getElementById('modal_texto').innerHTML = "A despesa foi cadastrada."
+
+        // config e exibe modal
+        let modal = new bootstrap.Modal(document.getElementById('modalRegistraDespesa'))
         modal.show()
     } else {
         // jquery | Modal components
         // Selecionamos a div modal, e a exibimos com 'show'
-        let modal = new bootstrap.Modal(document.getElementById('errosalvar'))
+
+        // alteração dinâmica do modal
+        document.getElementById('modal_div').className = "modal-header text-danger"
+        document.getElementById('modal_btn').className = 'btn btn-danger'
+        document.getElementById('modal_titulo').innerHTML = 'Erro ao Registrar!!'
+        document.getElementById('modal_texto').innerHTML = "Você deixou campos vazios."
+
+        // config e exibe modal
+        let modal = new bootstrap.Modal(document.getElementById('modalRegistraDespesa'))
         modal.show()
     }
 
