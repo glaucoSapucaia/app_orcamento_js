@@ -128,4 +128,15 @@ function cadastrarDespesa() {
 function carregaLista() {
     let despesas = Array()
     despesas = bd.recuperaRegistros()
+
+    // selecionando tbody da tabela
+    var listaDespesas = document.getElementById('lista_despesas')
+
+    despesas.forEach(function(d) {
+        // criando as linhas (tr)
+        let linha = listaDespesas.insertRow()
+
+        // criando colunas
+        linha.insertCell()
+    })
 }
