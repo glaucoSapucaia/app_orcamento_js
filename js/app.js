@@ -49,6 +49,30 @@ class Bd {
         localStorage.setItem(id, JSON.stringify(d))
         localStorage.setItem('id', id)
     }
+
+    // recuperando registros do local storage
+    recuperaRegistros() {
+        // lista de despesas
+        let despesas = []
+
+        let id = localStorage.getItem('id')
+
+        // iterando sobre itens
+        for (let i = 1; i <= id; i++) {
+
+            // coerção de JSON para objeto
+            let despesa = JSON.parse(localStorage.getItem(i))
+
+            // tratando indices nulos
+            if (despesa === null) {
+                continue
+            }
+
+            despesas.push(despesa)
+        }
+
+        return despesas
+    }
 }
 
 // instanciando classe Bd
@@ -98,4 +122,10 @@ function cadastrarDespesa() {
         modal.show()
     }
 
+}
+
+// Recuperando despesas para exibição
+function carregaLista() {
+    let despesas = Array()
+    despesas = bd.recuperaRegistros()
 }
