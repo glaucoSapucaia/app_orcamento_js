@@ -98,6 +98,14 @@ function cadastrarDespesa() {
         // Mantendo dados no local storage
         bd.salvar(despesa)
 
+        // limpando campos
+        dia.value = ''
+        mes.value = ''
+        ano.value = ''
+        tipo.value = ''
+        descricao.value = ''
+        valor.value = ''
+
         // alteração dinâmica do modal
         document.getElementById('modal_div').className = "modal-header text-success"
         document.getElementById('modal_btn').className = 'btn btn-success'
