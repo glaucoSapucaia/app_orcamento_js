@@ -73,6 +73,11 @@ class Bd {
 
         return despesas
     }
+
+    // pesquisando despesas
+    pesuisar(despesa) {
+        console.log(despesa)
+    }
 }
 
 // instanciando classe Bd
@@ -165,4 +170,17 @@ function carregaLista() {
         linha.insertCell(2).innerHTML = d.descricao
         linha.insertCell(3).innerHTML = d.valor
     })
+}
+
+// pesquisando e filtrano despesas
+function pesquisaDespesa() {
+    let ano = document.getElementById('ano').value
+    let mes = document.getElementById('mes').value
+    let dia = document.getElementById('dia').value
+    let tipo = document.getElementById('tipo').value
+    let descricao = document.getElementById('descricao').value
+    let valor = document.getElementById('valor').value
+
+    let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+    bd.pesuisar(despesa)
 }
