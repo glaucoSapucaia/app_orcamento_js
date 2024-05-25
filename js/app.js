@@ -68,6 +68,10 @@ class Bd {
                 continue
             }
 
+            // associando key para exclusão
+            despesa.id = i
+
+            // adicionando despesa a lista
             despesas.push(despesa)
         }
 
@@ -109,6 +113,10 @@ class Bd {
         }
 
         return despesasFiltradas
+    }
+
+    remover(id) {
+        localStorage.removeItem(id)
     }
 }
 
@@ -204,6 +212,32 @@ function carregaLista(despesas = Array(), filtro = false) {
         linha.insertCell(1).innerHTML = d.tipo
         linha.insertCell(2).innerHTML = d.descricao
         linha.insertCell(3).innerHTML = d.valor
+
+        // btn de exclusão
+        let btn = document.createElement('button')
+
+        // btn style
+        btn.className = 'btn btn-danger'
+        btn.innerHTML = '<ion-icon name="close-outline"></ion-icon>'
+
+        // associando id
+        btn.id = `id_despesa_${d.id}`
+
+        // ação do btn
+        btn.onclick = function() {
+            // refatorando str do id
+            let id = this.id.replace('id_despesa_', '')
+            
+            // removendo id com metodo do objeto bd
+            bd.remover(id)
+            alert('Despesa removida!')
+
+            // atualizando pagina após remoção de despesa
+            window.location.reload()
+        }
+
+        // inserção do btn por linha
+        linha.insertCell(4).append(btn)
     })
 }
 
