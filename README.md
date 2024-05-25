@@ -11,3 +11,8 @@ js project
 
 ## Local Storage
 ![alt text](/img/readme/image2.png)
+
+## Array Filter
+![alt text](/img/readme/image3.png)
+![alt text](/img/readme/image4.png)
+![alt text](/img/readme/image5.png)
