@@ -76,7 +76,39 @@ class Bd {
 
     // pesquisando despesas
     pesuisar(despesa) {
-        console.log(despesa)
+        let despesasFiltradas = []
+        // recuperando todas as despesas
+        despesasFiltradas = this.recuperaRegistros()
+
+        // ignorando campos vazios para os filtros
+        if (despesa.ano != '') {
+            // filtando atributos
+            // é necessário atribuir o novo valor com o filtro a variavel,
+            // para garantir a sobreposição de valores filtrados
+            despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano)
+        }
+
+        if (despesa.mes != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes)
+        }
+
+        if (despesa.dia != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.dia == despesa.dia)
+        }
+
+        if (despesa.tipo != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.tipo == despesa.tipo)
+        }
+
+        if (despesa.descricao != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.descricao == despesa.descricao)
+        }
+
+        if (despesa.valor != '') {
+            despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
+        }
+
+        console.log(despesasFiltradas)             
     }
 }
 
